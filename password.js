@@ -16,16 +16,23 @@ class Password{
   }
 
   validPrivateKey(){
-    if(this.privatkey.charAt([4]&&[9] == "-")){
 
     }
 
   }
 
-
-
-
-
-
   //Static function below this comment.
+  static makePrivateKey(){
+    let key = [];
+    let limit = 14;
+    let group1="";
+    let group2="";
+    let group3="";
+    for(c=0;c<4;c++){
+      group1 += Math.floor(Math.random()*10);
+      group2 += Math.floor(Math.random()*10);
+      group3 += Math.floor(Math.random()*10);
+    }
+
+  }
 }
