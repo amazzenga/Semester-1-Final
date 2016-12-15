@@ -16,23 +16,30 @@ class Password{
   }
 
   validPrivateKey(){
-
+    for(a=0;a<this.privatekey.length;a++){
+      if(this.privatekey[4] !== "-" || this.privatekey[9] !== "-"){
+        return false;
+      }
+      else{
+        if(Number.isNaN){
+          return false;
+        }
+      }
     }
-
   }
 
   //Static function below this comment.
   static makePrivateKey(){
     let key = [];
-    let limit = 14;
-    let group1="";
-    let group2="";
-    let group3="";
+    const limit = 14;
+    let group1 = "";
+    let group2 = "";
+    let group3 = "";
     for(c=0;c<4;c++){
-      group1 += Math.floor(Math.random()*10);
-      group2 += Math.floor(Math.random()*10);
-      group3 += Math.floor(Math.random()*10);
+      group1 += String(Math.floor(Math.random()*10));
+      group2 += String(Math.floor(Math.random()*10));
+      group3 += String(Math.floor(Math.random()*10));
     }
-
+    return group1 + "-" + group2 + "-" + group3;
   }
 }
