@@ -21,17 +21,17 @@ class Password{
         return false;
       }
       else{
-        if(Number.isNaN){
+        if(Number.isNaN(this.privatekey[b])){
           return false;
         }
       }
     }
+    return true;
   }
 
   //Static function below this comment.
   static makePrivateKey(){
-    let key = [];
-    const limit = 14;
+    let key = "";
     let group1 = "";
     let group2 = "";
     let group3 = "";
@@ -40,6 +40,7 @@ class Password{
       group2 += String(Math.floor(Math.random()*10));
       group3 += String(Math.floor(Math.random()*10));
     }
-    return group1 + "-" + group2 + "-" + group3;
+    key = group1 + "-" + group2 + "-" + group3;
+    return key;
   }
 }
